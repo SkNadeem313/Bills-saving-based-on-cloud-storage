@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css01.css">
+    <link rel="stylesheet" type="text/css" href="css02.css">
+
+    <title>SEPM</title>
+
+    <script>
+	function validateTags()
+	{
+		// document.getElementById('date').setAttribute('max', today)
+		var letters = /^[A-Za-z ]+$/;
+  		var x = document.forms["Upload_form"]["image_name"].value;
+  		if (x.match(letters))
+  		{
+    		return true;
+  		}
+  		else
+  		{
+  			alert("Name must be filled out in alphabets only");
+  			return false;
+  		}
+	}
+	</script>
+  </head>
+  <body>
+  	<!-- <div id="back_button">
+  		<button name="back" type="submit"><img src="backbutton.png" style="width: 28px; height: 25px;"></button>
+  	</div> -->
+  	<div id="upload_block">
+	<form name="Upload_form" action="upload1.php" method="post"  onsubmit="return validateTags()" enctype="multipart/form-data">
+  	<center><h3><b>Upload Image</b></h3></center>
+  	<br>
+	<div style="text-align: center;">
+	<input type="hidden" name="MAX_FILE_SIZE" value="8000000" style="width:100%; height: 30px;" required>
+	<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg" style="width: 250px;height: 30px; background-color: lightblue;cursor: pointer;" required>
+	</div>
+	<br>
+	<h6 style="margin-left: 30px;">Image Name: </h6>
+	<div style="margin-left: 30px;">
+	<input type="text" placeholder="Name.." name="image_name" autocomplete="off" required>
+	</div>
+	<br>
+	<h6 style="margin-left: 30px;">Category: </h6>
+	<div style="margin-left: 30px;">
+	<!-- <input type="" placeholder="Category.." name="category" autocomplete="off" required> -->
+	<select name="category" id="dropdown" style="width: 180px; border-color: #B53471;
+	border-style: solid;
+	border-width: 0.5px;">
+	<option value="Shopping" selected>Shopping</option>
+	<option value="Medical" >Medical</option>
+	<option value="Others" >Others</option>
+	</select>
+	</div>
+	<br>
+	<h6 style="margin-left: 30px;">Date: </h6>
+	<div style="margin-left: 30px">
+	<input type="text" placeholder="Date.." id="date" name="date" autocomplete="off" readonly>
+	</div>
+	<br>
+	<div style="margin-left: 30px;">
+	<input type="submit" name="upload_image" value="Upload">
+	</div>
+	</form>
+	<br><br>
+	<!-- <center><h3><b>Search Image</b></h3></center> -->
+	<br>
+	<!-- <center>
+	<div>
+		<form action="search.php" method="post" enctype="multipart/form-data">
+      	<input type="text" placeholder="Search..(Enter any tag)" autocomplete="off" name="tag">
+      	<button name="search_image" type="submit"><img src="save.png" style="width: 28px; height: 25px;"></button>
+    	</form>
+	</div>
+	</center>
+	<br> -->
+	<center>
+	<form action="logout.php" method="post">
+	<input type="submit" name="logout" value="Logout">
+	</form>
+	</center>
+	</div>
+  </body>
+</html>
+
+<!-- <i class="fa fa-search"></i> -->

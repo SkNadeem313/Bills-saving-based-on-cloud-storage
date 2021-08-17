@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding:0;
+    background-image: file.jpg;
+    background-size: cover;
+    background-position:center;
+    font-family: sans-serif;
+}
+.loginbox{
+    width: 320px;
+    height: 400px;
+    background-color: rgba(0,0,100, 0.5);
+	border-radius: 10%;
+	color: orange;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+.regbox{
+    width: 400px;
+    height: 520px;
+    background-color: rgba(0,0,100, 0.5);
+    border-radius: 10%;
+    color: orange;
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding-top: 40px;
+
+}
+.avtar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+
+}
+h1{
+    margin: 0px;
+    padding: 0 0 20px;
+    text-align: center;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input{
+    width:100px;
+    margin-bottom: 20px;
+}
+.by{
+    color: red;
+}
+.by2{
+    color: red;
+}
+d:hover {
+    color: red;
+}
+#new{
+    color: orange;
+}
+

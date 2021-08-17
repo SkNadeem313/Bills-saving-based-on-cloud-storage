@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>SEPM</title>
+	<link rel="stylesheet" type="text/css" href="css01.css">
+
+</head>
+<body>
+	<!-- <p><?php echo $_SESSION['user']; ?></p> -->
+	<div id="static_portion" style="width: 100%; height: 270px;">
+	<br>
+	<div id="profile">
+	<div id="User"><?php 
+		$fname = $_SESSION['fname'];
+		$lname = $_SESSION['lname'];
+		$name = $fname." ".$lname;
+		$name = strtoupper($name);
+		echo $name; ?></div>
+	<div id="uid"><?php
+		$id = $_SESSION['user'];
+		echo "Username: $id";?></div>
+	<br>
+	<br>
+	<div id="file_input">
+	<form style="width: 0px; height: 0px;" action="logout.php" method="post">
+	<input type="submit" name="logout" value="Logout">
+	</form>
+	<!--Select File to Upload:
+	 <input type="hidden" name="MAX_FILE_SIZE" value="8000000" required> 
+	<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>-->
+	<form style="width: 0px, height: 0px;" action="upload_page.php" method="post">
+	<input id="file_in" type="submit" name="upload" value="Upload a file">
+	</form>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<nav>
+	<div class="topnav">
+	    <a href="#" id="all" data-id="1">All</a>
+	  	<a href="#" id="shop" data-id="2">Shopping</a>
+	  	<a href="#" id="med" data-id="3">Medical</a>
+	  	<a href="#" id="others" data-id="4">Others</a>
+	</div>
+	</nav>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- <div id="content">
+	</div> -->
+	<main>
+    <div class="active" id="all_content"></div>
+    <div id="shop_content"></div>
+    <div id="med_content"></div>
+    <div id="other_content"></div>
+    </main>
+<!-- <script>
+function myFunction(option) {
+  // document.getElementById(id).innerHTML = "Hello World";
+  var options = ['all', 'shop', 'med', 'others'];
+  var i;
+  for (var i = options.length - 1; i >= 0; i--) {
+  	if (options[i] == option)
+  	{
+  		document.getElementById(options[i]).style.backgroundColor = "#f0932b";
+  		document.getElementById(options[i]).style.color = "black";
+  	}
+  	else
+  	{
+  		if (options[i] == 'home') {
+  			document.getElementById(options[i]).style.backgroundColor = "#be2edd";
+  			document.getElementById(options[i]).style.color = "#f2f2f2";
+  		}
+  		else{
+  			document.getElementById(options[i]).style.backgroundColor = "";
+  			document.getElementById(options[i]).style.color = "";
+  		}
+  	}
+  }
+
+}
+</script>
+ -->
+</body>
+</html>
